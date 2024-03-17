@@ -4,7 +4,7 @@ if ($acao == ""){ echo json_encode(['ERRO' => 'Caminho não encontrado!']); }
 
 if ($acao == 'lista' && $param == ''){
   $db = Db::connect();
-  $rs = $db->prepare("SELECT * FROM clientes ORDER BY nome");
+  $rs = $db->prepare("SELECT * FROM clientes ORDER BY id");
   $rs->execute();
   $obj = $rs->fetchAll(PDO::FETCH_ASSOC);
 

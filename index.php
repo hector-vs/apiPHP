@@ -23,7 +23,8 @@ if (isset($path[2])){
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-// var_dump ($path);
+//var_dump ($path);
+//var_dump ($acao);
 // var_dump ($method);
 
 include_once "classes/Db.php";
