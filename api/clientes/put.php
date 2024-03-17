@@ -1,8 +1,8 @@
 <?php
 
-if ($acao == ""){ echo json_encode(['ERRO' => 'Caminho não encontrado!']); }
+if ($acao == ""){ echo json_encode(['ERRO' => 'Caminho não encontrado!']); exit; }
 
-if ($acao == "atualiza" && $param == '') { echo json_encode(['ERRO' => 'Cliente não informado.']); }
+if ($acao == "atualiza" && $param == '') { echo json_encode(['ERRO' => 'Cliente não informado.']); exit; }
 
 if ($acao == 'atualiza' && $param != "") {
   //Elimina o primeiro indice do array

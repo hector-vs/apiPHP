@@ -1,6 +1,6 @@
 <?php
 
-if ($acao == ""){ echo json_encode(['ERRO' => 'Caminho não encontrado!']); }
+if ($acao == ""){ echo json_encode(['ERRO' => 'Caminho não encontrado!']); exit; }
 
 if ($acao == 'adiciona' && $param == ''){
   $sql = "INSERT INTO clientes (";
