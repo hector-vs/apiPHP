@@ -5,7 +5,7 @@ header('Access-Control-Allow-Origin: *'); //* -> Todos || Sites específicos: si
 date_default_timezone_set("America/Sao_Paulo");
 
 if(isset($_GET['path'])){
-  $path = explode("/", $_GET['path']);
+  $path = explode("/", $_GET['path']); 
 }
 
 if ($path[0] != '') { $api = $path[0]; } else { echo "Caminho não existe"; exit; }
@@ -23,9 +23,16 @@ if (isset($path[2])){
 
 $method = $_SERVER['REQUEST_METHOD'];
 
+$GLOBALS['secretJWT'] = '123456'; 
 //var_dump ($path);
 //var_dump ($acao);
 // var_dump ($method);
 
+# Classes
 include_once "classes/Db.php";
+include_once "classes/Jwt.php";
+include_once "classes/Usuarios.php";
+
+# API's
 include_once "api/clientes/clientes.php";
+include_once "api/usuarios/usuarios.php";
